@@ -1,9 +1,14 @@
-var express = require('express');
-var app = express();
+var express = require('express'),
+    path = require('path'),
+    app = express();
+    
+var port = 3000;
 
-app.get('/', function(req, resp){
-  resp.send("Hello word fron server")
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', function(req, res) {
+    res.redirect('index.html');
 });
 
-app.listen(3000);
-console.log("server running")
+app.listen(port);
+console.log('Server run on port:' + port );
