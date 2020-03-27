@@ -3,12 +3,17 @@ var express = require('express'),
     app = express();
     
 var port = 3000;
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/', function(req, res) {
-    res.redirect('index.html');
+    
+// mock data
+var mock = require('./mock_data/mock')
+    
+// routing
+app.get('/rest_data', function(req, resp){
+  console.log(req.url)
+  resp.send(mock);
 });
 
+// srart endpoint
+app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port);
-console.log('Server run on port:' + port );
+console.log(`Server run on ${port} port`);
