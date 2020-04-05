@@ -13,7 +13,7 @@ app.get('/rest_data', function(req, resp){
   resp.send(mock);
 });
 
-// srart endpoint
+// start endpoint
 app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port);
 console.log(`Server run on ${port} port`);
