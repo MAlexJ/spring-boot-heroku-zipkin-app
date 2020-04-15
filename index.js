@@ -1,16 +1,16 @@
-var express = require('express'),
-    path = require('path'),
-    app = express();
-    
-var port = 3000;
-    
+let express = require('express')
+let path = require('path')
+let app = express()
+
+let port = 3000;
+
 // mock data
-var mock = require('./mock_data/mock')
-    
+let mock = require('./mock_data/mock')
+
 // routing
-app.get('/rest_data', function(req, resp){
-  console.log(req.url)
-  resp.send(mock);
+app.get('/rest_data', function (req, resp) {
+    console.log(req.url)
+    resp.send(mock);
 });
 
 // start endpoint
