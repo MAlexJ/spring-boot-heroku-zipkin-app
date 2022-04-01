@@ -1,1 +1,1 @@
-web: java -jar libs/zipkin-server-2.23.16.jar
+web: java -jar libs/zipkin-server-2.23.16.jar  --armeria.ports[0].port=5000 --armeria.ports[0].ip=0.0.0.0
