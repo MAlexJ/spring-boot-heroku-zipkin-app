@@ -1,1 +1,1 @@
-web: java -jar libs/zipkin-server-2.23.16.jar --DES_HOSTS=0.0.0.0:5000
+web: java -jar libs/zipkin-server-2.23.16.jar -Dserver.port=$PORT
