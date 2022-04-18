@@ -1,0 +1,1 @@
+java -jar libs/zipkin-server-2.23.16.jar

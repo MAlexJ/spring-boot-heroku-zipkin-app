@@ -23,11 +23,17 @@ Procfile file <br>
 web: java -jar libs/zipkin-server-2.23.16.jar --armeria.ports[0].port=$PORT
 </code>
 
-#### Run zipkin on localy:
+#### Run zipkin on locally:
 
 default port: 9411 <br>
 url: http://localhost:9411/zipkin <br>
 
 <code>
 web: java -jar libs/zipkin-server-2.23.16.jar
+</code>
+
+#### Run zipkin on windows
+
+<code>
+zipkin-server.bat
 </code>
